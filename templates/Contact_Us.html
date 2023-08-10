@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Contact_Us.css') }}">
+    <title>CONTACT US</title>
+</head>
+<body>
+    <div class="Contact">
+        <h1>Contact Us</h1>
+        <form method="post">
+            <div class="field">
+                <input type="text" required>
+                <label>Enter your Name</label>
+            </div>
+            <div class="field">
+                <input type="text"  required>
+                <label>Enter your e-mail address</label>
+            </div>
+            <div class="field">
+                <input type="number"  required>
+                <label>Enter your Phone number</label>
+            </div>
+            <div class="field">
+                <input type="text"  required>
+                <label>Enter your reason for Appointemnt</label>
+            </div>
+            <input type="submit" value="SUBMIT">
+            </div>
+        </form>
+    </div>
+    
+    <div class="details">
+        <div class="box">
+            <div class="name">
+                <h4>NAME: </h4>
+                <h5>FIRST PERSON <br> SECOND PERSON</h5>
+            </div>
+            <div class="phno">
+                <h4>CONTACT NO: </h4>
+                <h5> +91 1234567890 <br> +91 1023456789 </h5> 
+            </div>
+            <div class="loc">
+                <h4>LOCATION:</h4>
+                <h5>Girish More, Babu Ghat <br> Kolkata-07, West Bengal</h5>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
