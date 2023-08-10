@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medical Site</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+
+
+  </head>
+  <body>
+    <!-- Note : sign in sign out feature to be implemented -->
+    <!-- preloader -->
+    <div id="loading">
+      <div id="loadingContent">Loading...</div>
+    </div>
+
+    <!-- Soham's part -->
+    <!-- simple header design -->
+    <div class="main">
+      <div class="header">
+        <div class="logo">
+          <div class="logopic">
+            <div id="titleOver">AiVantage</div>
+
+            <!-- <img src="images/heartbeat.gif" alt="error" /> -->
+          </div>
+        </div>
+        <div class="home">
+          <a href="">Home</a>
+        </div>
+        <div class="services">
+          <a href="">Services</a>
+        </div>
+        <div class="about">
+          <a href="">About</a>
+        </div>
+        <div class="ourDoc">
+          <a href="">Our Doctor</a>
+        </div>
+        <div class="contact">
+          <a href="">contact</a>
+        </div>
+        <div class="appoint">
+          <a href="">Book an appointment</a>
+        </div>
+        <div class="metamask">
+          <button type="button" class="btn btn-primary btn-sm" id="connect">
+            Connect Metamask
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let preload = document.getElementById("loading");
+
+      const time = 5000;
+      setTimeout(runPage, time);
+
+      function runPage() {
+        preload.style.display = "none";
+      }
+      //this metamask portion is interfering
+      connectElem = document.getElementById("connect");
+      connectElem.addEventListener("click", initialize);
+    </script>
+    <!-- till  here soham's part -->
+  </body>
+</html>

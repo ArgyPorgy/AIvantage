@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgb(254, 149, 166), rgb(136, 206, 229));
+    height: 100vh;
+    width: 100;
+    overflow: hidden;
+    background-size:contain ;
+    overflow-y: scroll;
+}
+.header{
+    padding-left: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex: 2;
+    justify-content: space-between;
+    position: relative;
+    height: 350px;
+    background: linear-gradient(rgb(254, 149, 166), rgb(136, 206, 229));
+}
+.photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    padding: 10px 50px 10px 10px;
+    width: 500px;
+}
+.photo_edit{
+    height: 250px;
+}
+.topic{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 10px 10px 10px 10px;
+}
+.members{
+    display: flex;
+    flex-direction: column;
+    background: rgb(136, 206, 229);
+    padding: 30px 100px;
+    align-items: center;
+}
+.team{
+    display: flex;
+    flex-direction: row;
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(rgb(246, 255, 161), rgb(136, 206, 229));
+    border: 1px solid black;
+    padding: 15px;
+    margin: 25px;
+    justify-content:center;
+    align-items: center;
+}
+.profile_photo{
+    border: 1px solid black;
+    width: 100px;
+    border-radius: 50px;
+}

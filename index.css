@@ -1,0 +1,84 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    color: white
+}
+a{
+    /* display: inline-block; */
+    text-decoration: none;
+
+
+}
+.header
+{ margin-right: 10px;
+    height: 40px;
+    width: 100vw;
+    color: red;
+background-color: #dd5152;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* padding-right: 20px; */
+    overflow: hidden;
+    align-items: center;
+    
+}
+.metamask{
+    padding-right: 30px;
+    font-weight: bold;
+    
+}
+.metamask button{
+    
+    color: rgb(233, 35, 35);
+    border: 1px solid rgb(215, 136, 136);
+    border-radius: 3px;
+    padding: 2px;
+    box-shadow: 0 0 5px white;
+    
+    background-color: rgb(166, 241, 116);
+}
+.metamask button:hover{
+    background-color: #fff;
+}
+.logo
+{
+    width: 50px;
+    
+}
+.logopic
+{
+    width: 140px;
+
+    height: 95px;
+    background-image: url("https://i.pinimg.com/originals/0e/8f/93/0e8f9366cb396a13485588c267750ddd.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    text-align: center;
+
+}
+
+#loading{
+    
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    /* gif url = https://smashinghub.com/wp-content/uploads/2014/08/cool-loading-animated-gif-8.gif */
+    background-image: url("https://smashinghub.com/wp-content/uploads/2014/08/cool-loading-animated-gif-8.gif");
+    background-color: #dd5152;
+background-repeat: no-repeat;
+background-position: center;
+background-blend-mode:lighten;
+
+}
+#loadingContent
+{
+display: flex;
+
+text-align: center;
+justify-content: center;
+align-self: center;
+
+}
