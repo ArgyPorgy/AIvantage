@@ -4,9 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Medical Site</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
-
-
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;900&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Note : sign in sign out feature to be implemented -->
@@ -33,7 +39,7 @@
           <a href="">Services</a>
         </div>
         <div class="about">
-          <a href="">About</a>
+          <a href="About_Us.html">About</a>
         </div>
         <div class="ourDoc">
           <a href="">Our Doctor</a>
@@ -50,12 +56,29 @@
           </button>
         </div>
       </div>
+      <div class="contentBody">
+        <div class="content">
+          <div>
+            <h2 id="top">Your Health is</h2>
+            <h2 id="bot">our priority</h2>
+          </div>
+          <div>
+            <p id="medPara">
+              Buy medicines online using your E-wallet. Consult the best doctors
+              and book online appointment.
+            </p>
+          </div>
+        </div>
+        <div class="pic">
+          <img src="images/PngItem_1939059.png" alt="" srcset="" />
+        </div>
+      </div>
     </div>
 
     <script>
       let preload = document.getElementById("loading");
 
-      const time = 5000;
+      const time = 2000;
       setTimeout(runPage, time);
 
       function runPage() {

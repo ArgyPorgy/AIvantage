@@ -2,7 +2,8 @@
 {
     margin: 0;
     padding: 0;
-    color: white
+    color: white;
+    overflow: hidden;
 }
 a{
     /* display: inline-block; */
@@ -52,12 +53,12 @@ background-color: #dd5152;
     width: 140px;
 
     height: 95px;
-    background-image: url("https://i.pinimg.com/originals/0e/8f/93/0e8f9366cb396a13485588c267750ddd.gif");
+    background-image: url("images/heartbeat.gif");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     text-align: center;
-
+z-index: 999;
 }
 
 #loading{
@@ -81,4 +82,61 @@ text-align: center;
 justify-content: center;
 align-self: center;
 
+}
+.contentBody
+{
+    height : 100vh;
+    width : 100vw; 
+    background-image: url("https://img.freepik.com/premium-photo/blue-pink-mesh-gradient-banner-background-wallpaper-website-template-landing-page-web-frame-text_685444-38.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: lighten;
+    display: flex;
+    
+}
+.content{
+    margin-top: 10%;
+    margin-left: 5%;
+}
+#top, #bot
+{
+    font-family: 'Nunito', sans-serif;
+    font-weight: bolder;
+    font-size: 40px;
+}
+#bot
+{
+    color: transparent;
+  -webkit-text-stroke: 1px white; /* Replace "blue" with your desired border color */
+  
+}
+.pic{
+    height: 500px;
+    
+    width: auto;
+
+}
+.contentBody
+{ z-index: -1;
+    position: relative;
+}
+.pic img{
+    height: 100%;
+    
+    position: absolute;
+    right: 50px;
+    bottom: 0;
+    
+}
+.content{
+    display: flex;
+    flex-direction: column;
+}
+#medPara{
+    width: 300px;
+    font-size: 18px;
+    font-family: 'Nunito',arial,'times-new-roman';
+    margin-top: 10px;
+    font-style: italic;
+    font-weight: bold;
 }
