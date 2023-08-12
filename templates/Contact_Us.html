@@ -10,24 +10,24 @@
 <body>
     <div class="Contact">
         <h1>Contact Us</h1>
-        <form method="post">
+        <form action = "/submit" method="post">
             <div class="field">
-                <input type="text" required>
+                <input type="text" name = "name" required>
                 <label>Enter your Name</label>
             </div>
             <div class="field">
-                <input type="text"  required>
+                <input type="text" name = "email" required>
                 <label>Enter your e-mail address</label>
             </div>
             <div class="field">
-                <input type="number"  required>
+                <input type="number" name = "number"  required>
                 <label>Enter your Phone number</label>
             </div>
             <div class="field">
                 <input type="text"  required>
                 <label>Enter your reason for Appointemnt</label>
             </div>
-            <input type="submit" value="SUBMIT">
+            <input type="submit" value="Submit">
             </div>
         </form>
     </div>
