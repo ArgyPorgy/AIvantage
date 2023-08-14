@@ -1,5 +1,5 @@
 body {
-    height: 100vh;
+    height: 80vh;
     display: grid;
     place-items: center;
   }
@@ -25,7 +25,7 @@ body {
   .check_anime_outer {
       width: 200px;
       height: 200px;
-      margin: 30px 80px;
+      margin: 80px 80px;
       position: relative;
   }
   .check_anime_mask {
