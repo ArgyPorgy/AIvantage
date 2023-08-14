@@ -43,25 +43,25 @@
       </div>
     </div>
     <div class="Contact">
-      <h1>Contact Us</h1>
-      <form method="post">
+      <form action="/submit" method="post">
+        <h1>Contact Us</h1>
         <div class="field">
-          <input type="text" required />
+          <input type="text" name="name" required />
           <label>Enter your Name</label>
         </div>
         <div class="field">
-          <input type="text" required />
+          <input type="text" name="email" required />
           <label>Enter your e-mail address</label>
         </div>
         <div class="field">
-          <input type="number" required />
+          <input type="tel" name="number" required />
           <label>Enter your Phone number</label>
         </div>
         <div class="field">
           <input type="text" required />
-          <label>Enter your reason for Appointemnt</label>
+          <label>Enter your reason for Appointment</label>
         </div>
-        <input type="submit" value="SUBMIT" />
+        <input type="submit" value="Submit" />
       </form>
     </div>
 

@@ -1,0 +1,113 @@
+body {
+    height: 80vh;
+    display: grid;
+    place-items: center;
+  }
+  .check_mark {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    font-size: 180px;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    border: solid 8px greenyellow;
+    z-index: -1;
+  }
+  .check_mark::before {
+    content: "";
+    width: 100px;
+    height: 40px;
+    border-left: solid 10px greenyellow;
+    border-bottom: solid 10px greenyellow;
+    transform: rotate(-45deg) translate(5px,-5px)
+  }
+  .check_anime_outer {
+      width: 200px;
+      height: 200px;
+      margin: 80px 80px;
+      position: relative;
+  }
+  .check_anime_mask {
+      width: 100px;
+      height: 200px;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+    z-index: 1;
+  }
+  .check_anime_mask_right {
+      right: 0;
+  }
+  .check_anime_mask_left {
+      left: 0;
+  }
+  .check_anime_mask_right::before {
+      content: '';
+      position: absolute;
+      width: 100px;
+      height: 230px;
+      background-color: white;
+      top: 0;
+      right: 0;
+    z-index: 1;
+      transform-origin: 0px 100px;
+      animation: right-sq 1s 1s forwards linear 1;
+  }
+  .check_anime_mask_left::before {
+      content: '';
+      position: absolute;
+    z-index: 1;
+      width: 100px;
+      height: 230px;
+      background-color: white;
+      transform-origin: 100px 80px;
+      animation: left-sq 1s 2s forwards linear 1;
+  }
+  .check_mask {
+      width: 120px;
+      height: 120px;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      margin: auto;
+      background-image: linear-gradient(white,white);
+      background-repeat: no-repeat;
+      animation: check-ap 1s 3s linear forwards 1;
+  }
+  @keyframes right-sq {
+      from {
+          transform: rotate(0deg);
+      }
+      to {
+          transform: rotate(180deg);
+      }
+  }
+  @keyframes left-sq {
+      from {
+          transform: rotate(0deg);
+      }
+      to {
+          transform: rotate(180deg);
+      }
+  }
+  @keyframes check-ap {
+      form {
+          background-position: 0;
+      }
+      to {
+          background-position: 150px;
+      }
+  }
+  .box{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .box h1{
+      color: orangered;
+  }
