@@ -8,7 +8,7 @@ body{
     background-size:contain ;
     overflow-y: scroll;
 }
-.header{
+.top{
     padding-left: 20px;
     margin-top: 20px;
     display: flex;
