@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     color: white;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
     font-family: "Nunito", sans-serif;
 }
 a{
