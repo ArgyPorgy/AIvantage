@@ -54,7 +54,7 @@ background-color: #dd5152;
     width: 140px;
 
     height: 95px;
-    background-image: url("images/heartbeat.gif");
+    background-image: url("/templates/images/heartbeat.gif");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
