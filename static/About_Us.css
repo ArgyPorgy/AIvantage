@@ -1,45 +1,66 @@
+h1,h2,h5,p{
+    color: black;
+}
 body{
     margin: 0;
     padding: 0;
-    background: linear-gradient(rgb(254, 149, 166), rgb(136, 206, 229));
+    box-sizing: border-box;
     height: 100vh;
-    width: 100;
+    background-size: contain ;
+    background: linear-gradient(rgb(254, 149, 166), rgb(136, 206, 229));
+    background-repeat: no-repeat; 
     overflow: hidden;
-    background-size:contain ;
-    overflow-y: scroll;
 }
-.top{
-    padding-left: 20px;
-    margin-top: 20px;
+.upper{
+    /* width: 100vw; */
+    margin-top: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
     display: flex;
-    flex-direction: row;
-    flex: 2;
+    flex-direction: row-reverse;
+    background: linear-gradient(rgb(254, 149, 166), rgb(136, 206, 229));
+}
+.hader{
+    display: flex;
+    flex-direction: column ;
     justify-content: space-between;
     position: relative;
-    height: 350px;
-    background: linear-gradient(rgb(254, 149, 166), rgb(136, 206, 229));
+    padding-bottom: 100px;
+    /* background: rgb(255, 190, 201); */
 }
-.photo{
+
+.desc{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 15px;
-    padding: 10px 50px 10px 10px;
-    width: 500px;
+    justify-content: center; 
+    padding-left: 20px;
+    /* text-align: center; */
 }
-.photo_edit{
-    height: 250px;
+.name{
+    display: flex;
+    flex: content;
+    /* width: 400px; */
+    padding-left: 1%;
+    /* margin-right: 5%; */
+    /* padding-bottom: 100px; */
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+    background: url(desktop.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 .topic{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    padding: 10px 10px 10px 10px;
+    padding: 10px 30px 10px 30px;
 }
 .members{
     display: flex;
     flex-direction: column;
     background: rgb(136, 206, 229);
-    padding: 30px 100px;
+    padding: 15px 15px;
     align-items: center;
+    position: relative;
 }
 .team{
     display: flex;
@@ -50,8 +71,9 @@ body{
     flex-direction: column;
     background: linear-gradient(rgb(246, 255, 161), rgb(136, 206, 229));
     border: 1px solid black;
-    padding: 15px;
-    margin: 25px;
+    box-shadow: 5px 5px 5px #000000;
+    padding: 5px;
+    margin: 10px;
     justify-content:center;
     align-items: center;
 }
@@ -59,4 +81,66 @@ body{
     border: 1px solid black;
     width: 100px;
     border-radius: 50px;
+}
+
+h1{
+    padding-left: 5%;
+    color: orangered;
+    letter-spacing: 8px;
+    white-space: nowrap;
+    font-size: 3em;
+    animation: typing 5s steps(11) infinite;
+    overflow: hidden;
+    position: relative;
+    /* -webkit-box-reflect:below 25px linear-gradient(transparent, rgba(0, 0, 0, 0.278)); */
+}
+h1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 90%;
+    animation: blinkCursor 1s steps(3);
+}
+@keyframes blinkCursor{
+    0%,75%{
+        opacity: 1;
+    }
+    76%,100%{
+        opacity: 0;
+    }
+    
+}
+@keyframes typing{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+@media (max-width: 750px){
+    .members,.team{
+        display: flex;
+        flex-direction: column;
+    }
+    .hader{
+        display: flex;
+        flex-direction: column;
+    }
+    .upper{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    h1{
+        letter-spacing: 2px;
+    }
+    body{
+        overflow: visible;
+    }
+    .name{
+        background-size: cover;
+    }
 }
