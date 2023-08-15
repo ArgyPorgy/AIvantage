@@ -45,7 +45,7 @@ body{
     /* justify-content: center; */
     align-items: center;
     text-align: center;
-    background: url(desktop.png);
+    background: url(templates/images/desktop.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
