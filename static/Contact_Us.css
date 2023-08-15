@@ -1,45 +1,48 @@
-
 body{
-    margin: 5px;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
     background: linear-gradient(rgb(254, 149, 166), rgb(136, 206, 229));
     min-height: 100vh;
     overflow: hidden;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .Contact h1{
     /* text-decoration: underline; */
     text-align: center;
-    padding: 0 0 20px 0;
+    color: black;
+    padding: 20px 0 20px 0;
     border-bottom: 4px groove burlywood;
+}
+.box
+{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .Contact{
     position: relative;
-    width: 470px;
-    height: 470px;
-    border-radius: 10px;
+    width: 450px;
+    height: 480px;
+    border-radius: 40px;
     overflow: hidden;
 }
 .Contact::before, .Contact::after{
     content: '';
     position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 470px;
-    height: 470px;
+    justify-content: center;
+    align-items: center;
+    width: 325px;
+    height: 275px;
     background: linear-gradient(0deg, transparent, transparent, rgb(255, 97, 123), rgb(255, 97, 123),rgb(255, 97, 123));
     z-index: 1;
-    transform-origin: bottom right;
-    animation: animate 6s linear infinite;
+    transform-origin: right bottom;
+    animation: animate 4s linear infinite;
 }
 .Contact::after{
     background: linear-gradient(0deg, transparent, transparent, rgb(36, 163, 163), rgb(36, 163, 163),rgb(36, 163, 163));
-    animation-delay: -3s;
+    animation-delay: -2s;
 }
 @keyframes animate{
     0%{
@@ -54,7 +57,7 @@ body{
     background: lightgoldenrodyellow;
     inset: 6px;
     border: 2px ridge gold;
-    border-radius: 8px;
+    border-radius: 40px;
     margin: 0px auto;
     z-index: 2;
     padding: 50px auto;
@@ -66,10 +69,12 @@ form .field{
     width: 75%;
 }
 .field input{
+    /* overflow-x: not hidden; */
     width: 100%;
     padding: 0 5px;
     height: 40px;
     font-size: 16px;
+    color: black;
     border: none;
     background: none;
     outline: none;
