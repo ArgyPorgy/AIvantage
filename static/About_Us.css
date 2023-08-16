@@ -1,3 +1,7 @@
+*
+{
+    font-family: "Nunito", sans-serif;
+}
 h1,h2,h5,p{
     color: black;
 }
@@ -9,7 +13,7 @@ body{
     background-size: contain ;
     background: linear-gradient(rgb(254, 149, 166), rgb(136, 206, 229));
     background-repeat: no-repeat; 
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .upper{
     /* width: 100vw; */
@@ -36,8 +40,11 @@ body{
     /* text-align: center; */
 }
 .name{
-    display: flex;
+    display: flex; 
     flex: content;
+    height: 60vh;
+    width: 60vh;
+    z-index: 100;
     /* width: 400px; */
     padding-left: 1%;
     /* margin-right: 5%; */
@@ -45,11 +52,55 @@ body{
     /* justify-content: center; */
     align-items: center;
     text-align: center;
-    background: url("templates/images/desktop.png");
+    /* background-image:  url("/templates/images/2773.png");
     background-position: center;
     background-size: contain;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
+    position: relative;
+    
 }
+#cursor{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3em;
+    width: 0.3em;
+    
+    background-color: #ffffff;
+    animation: blink 0.7s infinite;
+}
+#text{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    text-shadow: 0 0 10px black;
+}
+@keyframes blink {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+.name div{
+    position: absolute;
+    z-index: 1000;
+    margin-left: 20%;
+    margin-bottom: 20%;
+    display: inline-block;
+}
+.name img{
+        height: 75%;
+        z-index: 3;
+        display: inline-block;
+}
+.typing-container{
+    position: relative;
+    align-items: center;
+    
+}
+
 .topic{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     padding: 10px 30px 10px 30px;
@@ -83,9 +134,9 @@ body{
     border-radius: 50px;
 }
 
-h1{
+/* h1{
     padding-left: 5%;
-    color: orangered;
+    color: rgb(255, 144, 33);
     letter-spacing: 8px;
     white-space: nowrap;
     font-size: 3em;
@@ -93,7 +144,7 @@ h1{
     overflow: hidden;
     position: relative;
     /* -webkit-box-reflect:below 25px linear-gradient(transparent, rgba(0, 0, 0, 0.278)); */
-}
+/* } */ */
 h1::before{
     content: '';
     position: absolute;

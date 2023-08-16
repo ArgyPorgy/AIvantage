@@ -75,7 +75,11 @@
         </div>
       </div>
       <div class="name">
-        <h1>AIvantage &nbsp;</h1>
+        <img src="/templates/images/2773.png" alt="" />
+        <div class="typing-container">
+          <h1 id="blinkit"><span id="text"></span></h1>
+          <span id="cursor"></span>
+        </div>
       </div>
     </div>
 
@@ -152,5 +156,24 @@
         </div>
       </div>
     </div>
+    <script>
+      const textElement = document.getElementById("text");
+      const cursorElement = document.getElementById("cursor");
+
+      const text = " AiVantage";
+      let index = 0;
+
+      function type() {
+        if (index < text.length) {
+          textElement.textContent += text.charAt(index);
+          index++;
+          setTimeout(type, 100); // Adjust typing speed here (milliseconds)
+        } else {
+          cursorElement.style.display = "none";
+        }
+      }
+
+      type();
+    </script>
   </body>
 </html>
