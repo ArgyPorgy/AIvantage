@@ -4,12 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='Contact_Us.css') }}" >
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='index.css') }}" >
-
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='Contact_Us.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='index.css') }}"
+    />
+    <link rel="stylesheet" href="/static/index.css" />
+    <link rel="stylesheet" href="/static/Contact_Us.css" />
     <title>CONTACT US</title>
   </head>
-  
+
   <body>
     <div class="header">
       <div class="logo">
@@ -22,21 +31,21 @@
       <div class="home">
         <a href="">Home</a>
       </div>
-      <div class="services">
+      <!-- <div class="services">
         <a href="">Services</a>
-      </div>
-      <div class="about">
-        <a href="/templates/About_Us.html">About</a>
-      </div>
+      </div> -->
       <div class="ourDoc">
-        <a href="">Our Doctor</a>
+        <a href="">Our Products</a>
       </div>
       <div class="contact">
         <a href="/templates/Contact_Us.html">Contact</a>
       </div>
-      <div class="appoint">
-        <a href="">Book an appointment</a>
+      <div class="about">
+        <a href="/templates/About_Us.html">About</a>
       </div>
+      <!-- <div class="appoint">
+        <a href="">Book an appointment</a>
+      </div> -->
       <div class="metamask">
         <button type="button" class="btn btn-primary btn-sm" id="connect">
           Connect Metamask
@@ -65,6 +74,5 @@
         <input type="submit" value="Submit" />
       </form>
     </div>
-
   </body>
 </html>

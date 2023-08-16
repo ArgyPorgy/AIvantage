@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='thank_u.css') }}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='thank_u.css') }}"
+    />
+
     <title>THANK YOU</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="check_anime_outer">
-        <div class="check_anime_mask check_anime_mask_right"></div>
-        <div class="check_anime_mask check_anime_mask_left"></div>
-        <span class="check_mask"></span>
-        <div class="check_mark"></div>
-      </div>
-    <div class="box">
-        <h1>Order Successful</h1>
-        <h3>Thank you so much for your order.</h3>
+      <div class="check_anime_mask check_anime_mask_right"></div>
+      <div class="check_anime_mask check_anime_mask_left"></div>
+      <span class="check_mask"></span>
+      <div class="check_mark"></div>
     </div>
-</body>
+    <div class="box">
+      <h1>Order Successful</h1>
+      <h3>Thank you so much for your order.</h3>
+    </div>
+    <div>
+      <p>
+        <a href="/templates/index.html">Return back to home page</a>
+      </p>
+    </div>
+  </body>
 </html>
