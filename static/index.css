@@ -28,21 +28,23 @@ background-color: #dd5152;
 }
 .metamask{
     padding-right: 30px;
-    font-weight: bold;
+    
     
 }
 .metamask button{
     
-    color: rgb(233, 35, 35);
-    border: 1px solid rgb(215, 136, 136);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
     border-radius: 3px;
-    padding: 2px;
-    box-shadow: 0 0 5px white;
+    padding: 4px;
     
-    background-color: rgb(166, 241, 116);
+    
+    background-color: #470eb0;
+    
+
 }
 .metamask button:hover{
-    background-color: #fff;
+    background-color: rgb(98, 29, 202);
 }
 .logo
 {
