@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Medical Site</title>
-    <link rel="stylesheet" href="/static/index.css" />
+    <!-- <link rel="stylesheet" href="/static/index.css" /> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -34,24 +35,27 @@
         </div>
         <div class="home">
           <a href="">Home</a>
+          
         </div>
+
+        
         <!-- <div class="services">
           <a href="">Services</a>
         </div> -->
-        <div class="ourDoc">
-          <a href="">Our Products</a>
+        <div class="products">
+          <a href="{{ url_for('products') }}">Products</a>
         </div>
         <div class="contact">
-          <a href="/templates/Contact_Us.html">Contact</a>
+          <a href="{{ url_for('contact') }}">Contact</a>
         </div>
         <div class="about">
-          <a href="/templates/About_Us.html">About</a>
+          <a href="{{ url_for('about') }}">About</a>
         </div>
         <!-- <div class="appoint">
           <a href="">Book an appointment</a>
         </div> -->
         <div class="metamask">
-          <button type="button" class="btn btn-primary btn-sm" id="connect">
+          <button type="button" class="btn btn-primary btn-sm" id="connect" onclick="startconnect()">
             Connect Metamask
           </button>
         </div>
@@ -87,6 +91,23 @@
       //this metamask portion is interfering
       connectElem = document.getElementById("connect");
       connectElem.addEventListener("click", initialize);
+
+async function startconnect() {
+  if (typeof window.ethereum !== 'undefined') {
+      console.log('MetaMask is installed. Let\'s go!');
+  } else {
+      console.log('MetaMask is not installed.');
+  }
+
+  try {
+      
+      await window.ethereum.request({ method: 'eth_requestAccounts' });
+      alert("MetaMask is connected!");
+      
+  } catch (error) {
+      alert("Error connecting to MetaMask: " + error.message);
+  }
+};
     </script>
     <!-- till  here soham's part -->
   </body>

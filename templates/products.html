@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Products</title>
-    <link rel="stylesheet" href="/static/index.css" />
-    <link rel="stylesheet" href="/static/products.css" />
+    <!-- <link rel="stylesheet" href="/static/index.css" /> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}" />
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='products.css') }}" />
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;900&family=Share+Tech+Mono&display=swap"
       rel="stylesheet"
@@ -40,15 +42,17 @@
         <!-- <div class="services">
           <a href="">Services</a>
         </div> -->
-        <div class="ourDoc">
-          <a href="">Our Products</a>
-        </div>
-        <div class="contact">
-          <a href="/templates/Contact_Us.html">Contact</a>
-        </div>
-        <div class="about">
-          <a href="/templates/About_Us.html">About</a>
-        </div>
+        <!-- <div class="ourDoc">
+          <a href="">Our Products</a> -->
+          <div class="products">
+            <a href="{{ url_for('products') }}">Products</a>
+          </div>
+          <div class="contact">
+            <a href="{{ url_for('contact') }}">Contact</a>
+          </div>
+          <div class="about">
+            <a href="{{ url_for('about') }}">About</a>
+          </div>
         <!-- <div class="appoint">
           <a href="">Book an appointment</a>
         </div> -->

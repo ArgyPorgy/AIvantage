@@ -254,9 +254,11 @@ sum = 0;
 //place order
 
 cartHTMl+= `
+<a href="/payment">
 <button id="placeOrder">
 Place Order
 </button>
+</a>
 `;
 document.querySelector(".classItems").innerHTML = cartHTMl;
 
