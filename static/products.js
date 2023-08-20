@@ -263,6 +263,25 @@ Place Order
 document.querySelector(".classItems").innerHTML = cartHTMl;
 
 cartHTMl = '';
+
+const placeOrderButton = document.getElementById('placeOrder');
+
+placeOrderButton.addEventListener('click', async () => {
+    
+    if (window.ethereum) {
+        try {
+            await window.ethereum.request({ method: 'eth_requestAccounts' });
+          
+            const response = await fetch('/payment', { method: 'POST' });
+            const result = await response.text();
+            console.log(result);
+        } catch (error) {
+            console.error('Error connecting to MetaMask:', error.message);
+        }
+    } else {
+        console.log('MetaMask not available');
+    }
+});
 }
-//on click display added to cart
+
 
