@@ -253,35 +253,57 @@ sum = 0;
 
 //place order
 
-cartHTMl+= `
-<a href="/payment">
-<button id="placeOrder">
-Place Order
-</button>
-</a>
-`;
+ cartHTMl+= `
+
+ <button id="placeOrder" onclick="Order()">
+ Place Order
+ </button>
+
+ `;
+
+
+
 document.querySelector(".classItems").innerHTML = cartHTMl;
 
 cartHTMl = '';
-
-const placeOrderButton = document.getElementById('placeOrder');
-
-placeOrderButton.addEventListener('click', async () => {
-    
-    if (window.ethereum) {
-        try {
-            await window.ethereum.request({ method: 'eth_requestAccounts' });
-          
-            const response = await fetch('/payment', { method: 'POST' });
-            const result = await response.text();
-            console.log(result);
-        } catch (error) {
-            console.error('Error connecting to MetaMask:', error.message);
-        }
-    } else {
-        console.log('MetaMask not available');
-    }
-});
 }
 
 
+
+
+async function Order() {
+   
+    if (typeof window.ethereum !== 'undefined') {
+        try {
+    
+            const accounts = await window.ethereum.enable();
+
+            if (accounts.length === 0) {
+                console.error("No accounts available.");
+                return;
+            }
+
+            const senderAddress = accounts[0]; 
+
+            
+            const txParams = {
+                "from": senderAddress,
+                "to": "0xB923b9ed260AA3b9bE3900A2C5A602f30FAD794b",
+                "gas": "0x5208", // Example gas limit
+        "gasPrice": "0x4A817C800", // Example gas price (25 Gwei)
+        "value": "0x6F05B59D3B20000"
+            };
+
+        
+            const result = await window.ethereum.request({
+                method: "eth_sendTransaction",
+                params: [txParams],
+            });
+            console.log("Transaction result:", result);
+        } catch (error) {
+            console.error("Transaction error:", error);
+        }
+    } else {
+        console.error("MetaMask not detected.");
+    }
+}
