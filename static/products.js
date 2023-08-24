@@ -244,6 +244,10 @@ render();
 cartHTMl +=listELEM;
 }
 //total sum of items
+// whe
+whe = 4343780.9706553*sum;
+//hex
+hex = whe.toString(16);
 cartHTMl += `
 <p>
 Total Sum = ${sum.toFixed(2)}
