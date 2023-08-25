@@ -1,7 +1,7 @@
 
 const initialize = async () => {
   if (typeof window.ethereum !== 'undefined') {
-      console.log('MetaMask is installed. Let\'s go!');
+      console.log('MetaMask is installed!');
   } else {
       console.log('MetaMask is not installed.');
   }

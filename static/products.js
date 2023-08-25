@@ -245,12 +245,12 @@ cartHTMl +=listELEM;
 }
 //total sum of items
 // whe
-whe = 4343780.9706553*sum;
+whe = 1000000000000000000*sum;
 //hex
 hex = whe.toString(16);
 cartHTMl += `
 <p>
-Total Sum = ${sum.toFixed(2)}
+Total Sum = ${sum.toFixed(4)}
 </p>
 `;
 sum = 0;
@@ -276,6 +276,26 @@ cartHTMl = '';
 
 
 async function Order() {
+
+    
+const initialize = async () => {
+    if (typeof window.ethereum !== 'undefined') {
+        // console.log('MetaMask is installed!');
+    } else {
+        console.log('MetaMask is not installed.');
+    }
+  
+    try {
+        
+        await window.ethereum.request({ method: 'eth_requestAccounts' });
+        // alert("MetaMask is connected!");
+        
+    } catch (error) {
+        alert("Error connecting to MetaMask: " + error.message);
+    }
+  };
+  
+  initialize();
    
     if (typeof window.ethereum !== 'undefined') {
         try {
@@ -295,7 +315,7 @@ async function Order() {
                 "to": "0xB923b9ed260AA3b9bE3900A2C5A602f30FAD794b",
                 "gas": "0x5208", // Example gas limit
         "gasPrice": "0x4A817C800", // Example gas price (25 Gwei)
-        "value": "38D7EA4C68000"
+        "value": hex,
             };
 
         
