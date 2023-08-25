@@ -62,7 +62,7 @@ a:hover {
     width: 140px;
 
     height: 95px;
-    background-image: url("/templates/images/heartbeat.gif");
+    background-image: url("/static/images/heartbeat.gif");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -130,7 +130,7 @@ align-self: center;
 #top, #bot {
     font-family: 'Nunito', sans-serif;
     font-weight: bolder;
-    font-size: 40px;
+    font-size: 60px;
     
 }
 #bot
@@ -163,37 +163,12 @@ align-self: center;
 }
 #medPara{
     width: 300px;
-    font-size: 18px;
+    font-size: 25px;
     font-family: 'Nunito',arial,'times-new-roman';
     margin-top: 10px;
+    
     font-style: italic;
     font-weight: bold;
-    margin-top: 20px;
-    max-width: 600px;
-    text-align: center;
-    font-size: 16px;
-    margin-top: 20px;
-}
-
-
-
-.typing-text h2 {
-    overflow: hidden;
-    border-right: 1px solid #000;
-    white-space: nowrap;
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    animation: typing 3s steps(40);
-}
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
 }
 
 
