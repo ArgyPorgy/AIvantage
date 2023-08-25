@@ -26,6 +26,10 @@ def contact():
 def products():
     return render_template('products.html')
 
+@app.route("/thank_u.html")
+def thanks():
+    return render_template('thank_u.html')
+
 @app.route("/submit", methods = ['POST'])
 def submit():
     name = request.form.get('name')

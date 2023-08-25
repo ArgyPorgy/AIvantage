@@ -2,8 +2,8 @@
 {
     margin: 0;
     padding: 0;
-    color: white;
-    /*overflow-x: hidden;*/
+    color: #160b6a;
+    /* overflow-x: hidden; */
     font-family: "Nunito", sans-serif;
 }
 a{
@@ -12,19 +12,21 @@ a{
 
 
 }
+a:hover {
+    font-weight: bold;
+}
 .header
 { margin-right: 10px;
     height: 40px;
     width: 100vw;
-    color: red;
-background-color: #dd5152;
+    color: #d1a1a1;
+    background-color: #d8d0d9;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     /* padding-right: 20px; */
     overflow: hidden;
     align-items: center;
-    
 }
 .metamask{
     padding-right: 30px;
@@ -37,10 +39,7 @@ background-color: #dd5152;
     font-weight: bold;
     border-radius: 3px;
     padding: 4px;
-    
-    
-    background-color: #470eb0;
-    
+    background-color: #ff7600;
 
 }
 .metamask button:hover{

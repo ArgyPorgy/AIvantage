@@ -22,15 +22,13 @@ body
 .productItems
 {
     width: 90vw;
-    
-    /* auto height */
-    margin: auto;
+    margin: 76px;
     display: grid;
     margin-top: 20px;
-    border:  2px solid gray;
-border-radius: 3px;
-grid-template-columns: repeat(4,1fr);
-grid-row-gap: 5px;
+    border: 0px solid gray;
+    border-radius: 3px;
+    grid-template-columns: repeat(4,1fr);
+    grid-row-gap: 27px;
 }
 .main
 {
@@ -42,13 +40,13 @@ overflow: visible   ;
 {
     display: flex;
     margin: 5px;
-    width: 250px;
-    height: 200px;
+    width: 245px;
+    height: 230px;
     flex-direction: column;
-    padding-left: 30px;
+    padding-left: 54px;
     border: 1px solid gray;
     border-radius: 4px;
-    
+
 }
 .proTitle
 {font-weight: 600;
