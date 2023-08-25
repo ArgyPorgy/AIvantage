@@ -117,7 +117,7 @@ input[type="submit"]:hover{
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 800px;
   position: relative;
   margin: auto;
 }
@@ -176,6 +176,7 @@ input[type="submit"]:hover{
 
 /* The dots/bullets/indicators */
 .dot {
+  display: inline;
   cursor: pointer;
   height: 15px;
   width: 15px;
@@ -185,7 +186,13 @@ input[type="submit"]:hover{
   display: inline-block;
   transition: background-color 0.6s ease;
 }
-
+.slides-with-dots{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+}
 .active, .dot:hover {
   background-color: #717171;
 }
@@ -199,4 +206,9 @@ input[type="submit"]:hover{
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+.column-box{
+  display: flex;
+  flex-direction: row;
 }
