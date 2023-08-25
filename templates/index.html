@@ -61,14 +61,18 @@
       </div>
       <div class="contentBody">
         <div class="content">
-          <div>
-            <h2 id="top">Your Health is</h2>
-            <h2 id="bot">our priority</h2>
-          </div>
+         <div id="typing-container">
+    <div class="typing-text">
+        <h2 id="top">Your Health is</h2>
+    </div>
+    <div class="typing-text">
+        <h2 id="bot">our priority</h2>
+    </div>
+</div>
           <div>
             <p id="medPara">
-              Buy medicines online using your E-wallet. Consult the best doctors
-              and book online appointment.
+              Discover a new way to access healthcare with <bold>Aivantage</bold>. Our app merges blockchain technology and Metamask for secure global transactions. Say goodbye to traditional methods and embrace innovation. Welcome to Aivantage - where health meets technology.
+    
             </p>
           </div>
         </div>
@@ -109,6 +113,35 @@ async function startconnect() {
       alert("Error connecting to MetaMask: " + error.message);
   }
 };
+
+const typingTexts = document.querySelectorAll('.typing-text h2');
+const blinkingCursor = document.querySelector('.blinking-cursor');
+
+let currentTextIndex = 0;
+let currentText = '';
+let currentLetterIndex = 0;
+
+function typeNextLetter() {
+    if (currentTextIndex < typingTexts.length) {
+        currentText = typingTexts[currentTextIndex].textContent;
+        typingTexts[currentTextIndex].textContent = currentText.slice(0, currentLetterIndex + 1);
+        currentLetterIndex++;
+
+        if (currentLetterIndex <= currentText.length) {
+            setTimeout(typeNextLetter, 100);
+        } else {
+            currentTextIndex++;
+            currentLetterIndex = 0;
+            setTimeout(typeNextLetter, 1000);
+        }
+    } else {
+        blinkingCursor.style.display = 'none';
+    }
+}
+
+typeNextLetter();
+
+
     </script>
     <!-- till  here soham's part -->
   </body>

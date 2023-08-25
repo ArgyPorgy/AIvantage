@@ -12,6 +12,13 @@ a{
 
 
 }
+
+#typing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 a:hover {
     font-weight: bold;
 }
@@ -118,11 +125,13 @@ align-self: center;
     margin-top: 10%;
     margin-left: 5%;
 }
-#top, #bot
-{
+
+
+#top, #bot {
     font-family: 'Nunito', sans-serif;
     font-weight: bolder;
     font-size: 40px;
+    
 }
 #bot
 {
@@ -159,4 +168,39 @@ align-self: center;
     margin-top: 10px;
     font-style: italic;
     font-weight: bold;
+    margin-top: 20px;
+    max-width: 600px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 20px;
 }
+
+
+
+.typing-text h2 {
+    overflow: hidden;
+    border-right: 1px solid #000;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    animation: typing 3s steps(40);
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+
+
+/* @keyframes blink {
+    50% {
+    
+        opacity: 0;
+    }
+} */
