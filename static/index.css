@@ -162,7 +162,7 @@ align-self: center;
     flex-direction: column;
 }
 #medPara{
-    width: 300px;
+    width: 513px;
     font-size: 25px;
     font-family: 'Nunito',arial,'times-new-roman';
     margin-top: 10px;
@@ -170,6 +170,26 @@ align-self: center;
     font-style: italic;
     font-weight: bold;
 }
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.typing-text h2 {
+    overflow: hidden;
+    border-right: 1px solid #000;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    animation: typing 3s steps(40);
+}
+
 
 
 

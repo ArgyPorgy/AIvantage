@@ -53,14 +53,17 @@ body{
     }
 }
 .Contact form{
-    position: absolute;
-    background: lightgoldenrodyellow;
-    inset: 6px;
-    border: 2px ridge gold;
-    border-radius: 40px;
-    margin: 0px auto;
-    z-index: 2;
-    padding: 50px auto;
+  position: relative;
+  background: lightgoldenrodyellow;
+  inset: 2px;
+  border: -17px ridge gold;
+  border-radius: 2px;
+  margin: -6px auto;
+  z-index: 2;
+  padding: 50px auto;
+  /* margin-top: -3px; */
+  top: -2px;
+  padding: 15px 14px;
 }
 form .field{
     position: relative;
@@ -191,7 +194,8 @@ input[type="submit"]:hover{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 50px;
+  margin-left: 152px;
+  margin-top: 148px;
 }
 .active, .dot:hover {
   background-color: #717171;
