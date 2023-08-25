@@ -10,9 +10,9 @@ data=[]
 def render():
     return render_template('index.html')
 
-@app.route("/home")
-def home():
-    return render_template('index.html')
+# @app.route("/home")
+# def home():
+#     return render_template('index.html')
 
 @app.route("/about")
 def about():
