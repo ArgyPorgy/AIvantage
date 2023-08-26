@@ -74,7 +74,7 @@ body{
     text-align: center;
     justify-content: center;
     text-shadow: 0 0 10px black;
-    
+    color: #ffffff;
 }
 @keyframes blink {
     0%, 100% {
@@ -121,7 +121,10 @@ body{
 .profile{
     display: flex;
     flex-direction: column;
-    background: linear-gradient(rgb(246, 255, 161), rgb(136, 206, 229));
+    background: url("https://media.istockphoto.com/id/1174989484/photo/abstract-technology-blue-spotlight-backgrounds-loopable-elements-4k-resolution.jpg?b=1&s=612x612&w=0&k=20&c=SwVVyeQ5TdV-RdkH8lAs7tbT4g9XlE226Rnrj0T8r2g=") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     border: 1px solid black;
     box-shadow: 5px 5px 5px #000000;
     padding: 5px;
@@ -195,4 +198,17 @@ h1::before{
     .name{
         background-size: cover;
     }
+}
+.profile_photo
+{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+ 
+}
+
+.profile h5{
+    text-shadow: 0 0 5px blue;
+    color: white;
+
 }
