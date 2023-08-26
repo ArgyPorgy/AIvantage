@@ -180,7 +180,7 @@ align-self: center;
     }
 }
 
-.typing-text h2 {
+.typing-text #bot {
     overflow: hidden;
     border-right: 1px solid #000;
     white-space: nowrap;

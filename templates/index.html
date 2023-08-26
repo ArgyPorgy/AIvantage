@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Medical Site</title>
     <!-- <link rel="stylesheet" href="/static/index.css" /> -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='index.css') }}"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,7 +40,6 @@
           <a href="{{ url_for('render') }}">Home</a>
         </div>
 
-        
         <!-- <div class="services">
           <a href="">Services</a>
         </div> -->
@@ -54,32 +56,42 @@
           <a href="">Book an appointment</a>
         </div> -->
         <div class="metamask">
-          <button type="button" class="btn btn-primary btn-sm" id="connect" onclick="startconnect()">
+          <button
+            type="button"
+            class="btn btn-primary btn-sm"
+            id="connect"
+            onclick="startconnect()"
+          >
             Connect Metamask
           </button>
         </div>
       </div>
       <div class="contentBody">
         <div class="content">
-         <div id="typing-container">
-    <div class="typing-text">
-        <h2 id="top">Your Health is</h2>
-    </div>
-    <div class="typing-text">
-        <h2 id="bot">our priority</h2>
-    </div>
-</div>
+          <div id="typing-container">
+            <div class="typing-text">
+              <h2 id="top">Your Health is</h2>
+            </div>
+            <div class="typing-text">
+              <h2 id="bot">our priority</h2>
+            </div>
+          </div>
           <div>
             <p id="medPara">
-              Discover a new way to access healthcare with <bold>Aivantage</bold>. Our app merges blockchain technology and Metamask for secure global transactions. Say goodbye to traditional methods and embrace innovation. Welcome to Aivantage - where health meets technology.
-    
+              Discover a new way to access healthcare with
+              <bold>Aivantage</bold>. Our app merges blockchain technology and
+              Metamask for secure global transactions. Say goodbye to
+              traditional methods and embrace innovation. Welcome to Aivantage -
+              where health meets technology.
             </p>
           </div>
         </div>
         <div class="pic">
           <!-- <img src="./images/PngItem_1939059.png" alt="" /> -->
-          <img src="{{ url_for('static', filename='images/PngItem_1939059.png') }}" alt="" />
-
+          <img
+            src="{{ url_for('static', filename='images/PngItem_1939059.png') }}"
+            alt=""
+          />
         </div>
       </div>
     </div>
@@ -97,51 +109,50 @@
       connectElem = document.getElementById("connect");
       connectElem.addEventListener("click", initialize);
 
-async function startconnect() {
-  if (typeof window.ethereum !== 'undefined') {
-      console.log('MetaMask is installed. Let\'s go!');
-  } else {
-      console.log('MetaMask is not installed.');
-  }
-
-  try {
-      
-      await window.ethereum.request({ method: 'eth_requestAccounts' });
-      alert("MetaMask is connected!");
-      
-  } catch (error) {
-      alert("Error connecting to MetaMask: " + error.message);
-  }
-};
-
-const typingTexts = document.querySelectorAll('.typing-text h2');
-const blinkingCursor = document.querySelector('.blinking-cursor');
-
-let currentTextIndex = 0;
-let currentText = '';
-let currentLetterIndex = 0;
-
-function typeNextLetter() {
-    if (currentTextIndex < typingTexts.length) {
-        currentText = typingTexts[currentTextIndex].textContent;
-        typingTexts[currentTextIndex].textContent = currentText.slice(0, currentLetterIndex + 1);
-        currentLetterIndex++;
-
-        if (currentLetterIndex <= currentText.length) {
-            setTimeout(typeNextLetter, 100);
+      async function startconnect() {
+        if (typeof window.ethereum !== "undefined") {
+          console.log("MetaMask is installed. Let's go!");
         } else {
+          console.log("MetaMask is not installed.");
+        }
+
+        try {
+          await window.ethereum.request({ method: "eth_requestAccounts" });
+          alert("MetaMask is connected!");
+        } catch (error) {
+          alert("Error connecting to MetaMask: " + error.message);
+        }
+      }
+
+      const typingTexts = document.querySelectorAll(".typing-text h2");
+      const blinkingCursor = document.querySelector(".blinking-cursor");
+
+      let currentTextIndex = 0;
+      let currentText = "";
+      let currentLetterIndex = 0;
+
+      function typeNextLetter() {
+        if (currentTextIndex < typingTexts.length) {
+          currentText = typingTexts[currentTextIndex].textContent;
+          typingTexts[currentTextIndex].textContent = currentText.slice(
+            0,
+            currentLetterIndex + 1
+          );
+          currentLetterIndex++;
+
+          if (currentLetterIndex <= currentText.length) {
+            setTimeout(typeNextLetter, 100);
+          } else {
             currentTextIndex++;
             currentLetterIndex = 0;
             setTimeout(typeNextLetter, 1000);
+          }
+        } else {
+          blinkingCursor.style.display = "none";
         }
-    } else {
-        blinkingCursor.style.display = 'none';
-    }
-}
+      }
 
-typeNextLetter();
-
-
+      typeNextLetter();
     </script>
     <!-- till  here soham's part -->
 
