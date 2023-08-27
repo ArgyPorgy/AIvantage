@@ -345,7 +345,7 @@ whe = 1000000000000000000*sum;
 hex = whe.toString(16);
 cartHTMl += `
 <p>
-Total Sum = ${sum.toFixed(4)}
+Total Sum = ${sum.toFixed(5)}
 </p>
 `;
 sum = 0;
