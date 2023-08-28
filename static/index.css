@@ -2,7 +2,7 @@
 {
     margin: 0;
     padding: 0;
-    color: #160b6a;
+    color: #fdfdfd;
     /* overflow-x: hidden; */
     font-family: "Nunito", sans-serif;
 }
@@ -199,3 +199,17 @@ align-self: center;
         opacity: 0;
     }
 } */
+#top{
+    
+    background: linear-gradient(#dd5152,#fd2626,#ff7600);
+    -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+}
+#medPara{
+    color: rgb(243, 79, 33);
+    
+}
+bold{
+    color: red;
+    text-shadow: 0 0 20px rgb(243, 84, 84);
+}

@@ -353,11 +353,11 @@ sum = 0;
 //place order
 
  cartHTMl+= `
-
+<li>
  <button id="placeOrder" onclick="Order()">
  Place Order
  </button>
-
+</li>
  `;
 
 
